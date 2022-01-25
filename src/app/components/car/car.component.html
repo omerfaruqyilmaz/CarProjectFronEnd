@@ -4,7 +4,6 @@
       <div class="spinner-grow spinner-grow-sm" role="status">
         <span class="visually-hidden">Loading...</span>
       </div>
-
       <table class="table">
         <thead>
           <tr>
@@ -26,6 +25,15 @@
             <td>{{ car.modelYear }}</td>
             <td>{{ car.dailyPrice }}</td>
             <td>{{ car.descriptions }}</td>
+            <td>
+              <button
+                routerLink="/cars/details/{{ car.carId }}"
+                title="Show Details"
+                id="btnInfo"
+              >
+                <i class="fas fa-info-circle"></i>
+              </button>
+            </td>
           </tr>
         </tbody>
       </table>

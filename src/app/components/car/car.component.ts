@@ -25,13 +25,13 @@ export class CarComponent implements OnInit {
         this.getCarsByColor(params['colorId']);
       } else {
         this.getCars();
-        console.log(this.cars,"sdsd")
       }
     });
   }
 
   getCars() {
     this.carService.getCars().subscribe((response) => {
+      console.log(response.data,"girdi")
       this.cars = response.data;
       this.dataLoaded = true;
     });
